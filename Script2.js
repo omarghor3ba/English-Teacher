@@ -1,56 +1,25 @@
-function checkAnswer1() {
-  const answer = document.querySelector('input[name="question1"]:checked');
-  const result = document.getElementById("result1");
-  if (!answer) {
-    result.innerText = "Please select an answer.";
-  } else if (answer.value === "C") {
-    result.innerText = "Good job!";
-    result.style.color = "#32fa00ff";
-  } else {
-    result.innerText = "Try again.";
-    result.style.color = "#cc0000";
-}
-}
+function checkAnswer(number) {
+  const selected = document.querySelector(`input[name="question${number}"]:checked`);
+  const result = document.getElementById(`result${number}`);
 
-function checkAnswer2() {
-  const answer = document.querySelector('input[name="question2"]:checked');
-  const result = document.getElementById("result2");
-  if (!answer) {
+  if (!selected) {
     result.innerText = "Please select an answer.";
-  } else if (answer.value === "D") {
-    result.innerText = "Good job!";
-    result.style.color = "#32fa00ff";
-
-  } else {
-    result.innerText = "Try again.";
-    result.style.color = "#cc0000";
+    return;
   }
-}
 
-function checkAnswer3() {
-  const answer = document.querySelector('input[name="question3"]:checked');
-  const result = document.getElementById("result3");
-  if (!answer) {
-    result.innerText = "Please select an answer.";
-  } else if (answer.value === "C") {
+  // correct answers for each question
+  const correctAnswers = {
+    1: "C", // bought
+    2: "D", // went
+    3: "C", // ate
+    4: "D"  // finished
+  };
+
+  if (selected.value === correctAnswers[number]) {
     result.innerText = "Good job!";
-    result.style.color = "#32fa00ff";
+    result.style.color = "green";
   } else {
     result.innerText = "Try again.";
-    result.style.color = "#cc0000";
-  }
-}
-
-function checkAnswer4() {
-  const answer = document.querySelector('input[name="question4"]:checked');
-  const result = document.getElementById("result4");
-  if (!answer) {
-    result.innerText = "Please select an answer.";
-  } else if (answer.value === "D") {
-    result.innerText = "Good job!";
-    result.style.color = "#32fa00ff";
-  } else {
-    result.innerText = "Try again.";
-    result.style.color=    result.style.color = "#cc0000";
+    result.style.color = "red";
   }
 }
