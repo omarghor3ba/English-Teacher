@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Past Simple Test</title>
+  <link rel="stylesheet" href="Past simple test.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      padding: 0;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin-top: 25px;
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    button {
+      margin-top: 10px;
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    h2[id^="result"] {
+      margin-top: 10px;
+    }
+
+    /* ✅ Mobile-friendly for Galaxy S8 and similar phones */
+    @media only screen and (max-width: 360px) {
+      body {
+        margin: 10px;
+        font-size: 16px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      h2 {
+        font-size: 1.1rem;
+      }
+
+      button {
+        width: 100%;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="past">
+    <h1>The Past Simple Test</h1>
+
+    <h2>Question 1</h2>
+    <p>I _____ a new car yesterday.</p>
+    <input type="radio" name="question1" value="A"> A) buy<br>
+    <input type="radio" name="question1" value="B"> B) buys<br>
+    <input type="radio" name="question1" value="C"> C) bought<br>
+    <input type="radio" name="question1" value="D"> D) buying<br>
+    <button onclick="checkAnswer(1)">Submit</button>
+    <h2 id="result1"></h2>
+    <hr>
+
+    <h2>Question 2</h2>
+    <p>We _____ to a concert last weekend.</p>
+    <input type="radio" name="question2" value="A"> A) go<br>
+    <input type="radio" name="question2" value="B"> B) going<br>
+    <input type="radio" name="question2" value="C"> C) goes<br>
+    <input type="radio" name="question2" value="D"> D) went<br>
+    <button onclick="checkAnswer(2)">Submit</button>
+    <h2 id="result2"></h2>
+    <hr>
+    <h2>Question 3</h2>
+    <p>They _____ the whole cake themselves last night.</p>
+    <input type="radio" name="question3" value="A"> A) eat<br>
+    <input type="radio" name="question3" value="B"> B) eating<br>
+    <input type="radio" name="question3" value="C"> C) ate<br>
+    <input type="radio" name="question3" value="D"> D) eaten<br>
+    <button onclick="checkAnswer(3)">Submit</button>
+    <h2 id="result3"></h2>
+    <hr>
+    <h2>Question 4</h2>
+    <p>She _____ her homework before dinner.</p>
+    <input type="radio" name="question4" value="A"> A) finish<br>
+    <input type="radio" name="question4" value="B"> B) finishes<br>
+    <input type="radio" name="question4" value="C"> C) is finishing<br>
+    <input type="radio" name="question4" value="D"> D) finished<br>
+    <button onclick="checkAnswer(4)">Submit</button>
+    <h2 id="result4"></h2>
+  </div>
+    <hr>
+  <!-- ✅ Make sure this file name matches your JS file exactly -->
+  <script src="Script2.js"></script>
+</body>
+</html>

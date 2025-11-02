@@ -1,0 +1,13 @@
+#bestimg{
+    width: 500px; 
+    height: 500px;
+}
+@media screen and (max-width:361px) {
+    #bestimg{
+        width: 200px;
+        height: 200px;
+
+    
+    }
+}
+    
